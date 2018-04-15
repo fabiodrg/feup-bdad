@@ -43,7 +43,7 @@ insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (1032, 
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (6304, 'Pincus Dallinder', '1940-07-20 21:13:38', 1, 2);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (3406, 'Cathy Virgin', '1945-05-11 22:26:28', 3, 4);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (9947, 'Stephanie Grigolli', '1949-06-12 21:41:27', 2, 5);
-insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (836, 'Nannie Margerison', '1971-07-14 08:57:49', 2, 1);
+insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (8360, 'Nannie Margerison', '1971-07-14 08:57:49', 2, 1);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (3627, 'Windham Reihill', '1972-08-31 02:30:59', 4, 1);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (1055, 'Davin Cancellario', '1969-08-02 07:43:58', 1, 2);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (4522, 'Benedetto Timblett', '1951-11-18 03:47:35', 4, 3);
@@ -120,7 +120,7 @@ insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (888, '
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (6997, 'Emlen Canape', '1963-10-07 17:56:21', 2, 7);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (3314, 'Hobard Bidder', '1961-07-09 05:46:28', 3, 7);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (6715, 'Rollins Whetnall', '1942-04-01 20:08:05', 3, 2);
-insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (6867, 'Nancey Goomes', '1974-01-03 00:43:59', 4, 4);
+insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (6861, 'Nancey Goomes', '1974-01-03 00:43:59', 4, 4);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (8613, 'Lucille Siggin', '1940-04-13 16:21:41', 2, 2);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (9968, 'Rebecca Dalliston', '1964-01-15 04:18:55', 1, 2);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (3597, 'Lief Mathen', '1970-04-15 12:31:51', 1, 4);
@@ -133,7 +133,7 @@ insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (1040, 
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (8894, 'Joelle Chazelle', '1975-06-10 05:38:03', 3, 1);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (2096, 'Milt De la Zenne', '1974-09-28 12:09:49', 3, 3);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (7713, 'Raymond Khomin', '1983-06-26 00:22:14', 4, 1);
-insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (3736, 'Mariska Blaxeland', '1986-04-28 21:13:44', 3, 3);
+insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (3731, 'Mariska Blaxeland', '1986-04-28 21:13:44', 3, 3);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (5511, 'Janean Liddiatt', '1966-02-21 18:02:43', 2, 1);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (3826, 'Jessee Loraine', '1957-12-27 22:50:23', 3, 1);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (9702, 'Kaia MacGorley', '1953-05-05 20:33:24', 4, 1);
@@ -160,7 +160,7 @@ insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (7324, 
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (7044, 'Florella Viner', '1976-08-16 11:47:25', 3, 2);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (9036, 'Crista Killough', '1968-04-25 03:32:22', 1, 6);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (8593, 'Ryon Shields', '1980-09-19 08:42:25', 3, 2);
-insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (6667, 'Sonia Britzius', '1969-01-16 22:43:46', 4, 7);
+insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (6666, 'Sonia Britzius', '1969-01-16 22:43:46', 4, 7);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (3763, 'Emelyne Lyptratt', '1959-08-08 23:25:21', 1, 6);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (1824, 'Augustina Basson', '1990-04-22 00:19:13', 2, 3);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (2370, 'Chiquita Westpfel', '1951-05-27 10:29:23', 4, 6);
@@ -244,7 +244,7 @@ insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (6681, 
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (2134, 'Dannye Kimmitt', '1971-08-10 13:47:36', 2, 6);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (4447, 'Elliott Mc Gee', '1973-12-02 23:23:07', 3, 4);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (1551, 'Nanine Cass', '1973-08-26 20:20:54', 1, 4);
-insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (2748, 'Urbanus Kaming', '1989-04-05 09:07:18', 1, 6);
+insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (2740, 'Urbanus Kaming', '1989-04-05 09:07:18', 1, 6);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (7591, 'Dex Freer', '1955-06-21 20:17:10', 1, 7);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (3077, 'Arlyne Kemball', '1942-02-11 20:28:47', 1, 7);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (2676, 'Travers Byles', '1979-12-01 02:25:06', 2, 7);
@@ -296,7 +296,7 @@ insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (9969, 
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (5922, 'Billie Breming', '1970-10-24 07:25:34', 1, 7);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (4514, 'Veronica Leather', '1968-07-23 08:50:45', 2, 3);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (28, 'Valle O''Doogan', '1982-11-29 07:21:13', 2, 7);
-insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (7508, 'Garey Winfred', '1978-11-19 22:19:09', 3, 1);
+insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (7501, 'Garey Winfred', '1978-11-19 22:19:09', 3, 1);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (1690, 'Claudian Sherringham', '1966-10-04 02:05:11', 3, 4);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (9428, 'Brendin Tilio', '1956-09-04 04:50:41', 1, 1);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (8177, 'Reba Gerold', '1964-12-14 04:21:20', 1, 2);
