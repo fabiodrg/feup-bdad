@@ -11,4 +11,8 @@ cat Data/TipoSala.sql >> povoar.sql
 cat Data/TipoAula.sql >> povoar.sql
 cat Data/Docente.sql >> povoar.sql
 cat Data/Sala.sql >> povoar.sql
+cat Data/Curso.sql >> povoar.sql
+cat Data/UC.sql >> povoar.sql
+cat Data/OcorrenciaUC.sql >> povoar.sql
 # OK
+cat Data/Aula.sql >> povoar.sql
