@@ -102,7 +102,7 @@ CREATE TABLE Edificio(
 
 CREATE TABLE Sala(
     id INTEGER PRIMARY KEY,
-    numero INTEGER UNIQUE NOT NULL CHECK(numero > 0),
+    numero INTEGER UNIQUE NOT NULL,
     tipo REFERENCES TipoSala NOT NULL,
     edificio REFERENCES Edificio NOT NULL
 );
