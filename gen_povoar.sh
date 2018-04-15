@@ -16,3 +16,6 @@ cat Data/UC.sql >> povoar.sql
 cat Data/OcorrenciaUC.sql >> povoar.sql
 cat Data/Aula.sql >> povoar.sql
 cat Data/Classificacao.sql >> povoar.sql
+cat Data/DocenteUCs.sql >> povoar.sql
+cat Data/Gabinete.sql >> povoar.sql
+cat Data/Frequencia.sql >> povoar.sql
