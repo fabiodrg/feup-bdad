@@ -1,3 +1,6 @@
+/*
+    Classificacao
+*/
 insert into Classificacao (estudanteID, oucID, nota) values (325, 841, 13.64);
 insert into Classificacao (estudanteID, oucID, nota) values (145, 443, 15.07);
 insert into Classificacao (estudanteID, oucID, nota) values (117, 467, 4.96);

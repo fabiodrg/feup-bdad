@@ -1,3 +1,6 @@
+/*
+    Frequencia
+*/
 insert into Frequencia (estudanteId, oucId, faltas) values (56, 433, 3);
 insert into Frequencia (estudanteId, oucId, faltas) values (475, 229, 5);
 insert into Frequencia (estudanteId, oucId, faltas) values (337, 73, 5);

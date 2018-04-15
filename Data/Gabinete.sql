@@ -1,3 +1,6 @@
+/*
+    Gabinete
+*/
 insert into Gabinete (docenteID, salaID) values (101, 84);
 insert into Gabinete (docenteID, salaID) values (279, 62);
 insert into Gabinete (docenteID, salaID) values (190, 56);

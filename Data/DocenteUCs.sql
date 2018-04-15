@@ -1,3 +1,6 @@
+/*
+    DocenteUCs
+*/
 insert into DocenteUCs (ucID, docID) values (51, 276);
 insert into DocenteUCs (ucID, docID) values (121, 36);
 insert into DocenteUCs (ucID, docID) values (406, 12);

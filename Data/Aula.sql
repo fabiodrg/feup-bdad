@@ -1,3 +1,6 @@
+/*
+    Aula
+*/
 insert into Aula (diaSemana, hora, tipo, sala, ocorrenciaUC, docente) values (2, '15:07', 3, 63, 44, 7);
 insert into Aula (diaSemana, hora, tipo, sala, ocorrenciaUC, docente) values (0, '17:15', 2, 81, 655, 173);
 insert into Aula (diaSemana, hora, tipo, sala, ocorrenciaUC, docente) values (4, '9:28', 2, 40, 924, 62);

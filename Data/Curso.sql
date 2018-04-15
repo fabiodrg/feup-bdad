@@ -1,3 +1,6 @@
+/*
+    Curso
+*/
 insert into Curso (sigla, nome, duracao, tipo, dept) values ('REJC', 'accumsan tortor quis', 3, 4, 2);
 insert into Curso (sigla, nome, duracao, tipo, dept) values ('UPWL', 'vitae ipsum', 3, 3, 7);
 insert into Curso (sigla, nome, duracao, tipo, dept) values ('RFDI', 'purus eu magna', 2, 1, 4);
