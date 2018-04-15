@@ -22,12 +22,12 @@ drop table if exists Frequencia;
 
 CREATE TABLE Estudante (
     id INTEGER PRIMARY KEY,
-    numero INTEGER UNIQUE NOT NULL, /*UK NN*/
-    nome TEXT,
+    numero INTEGER UNIQUE NOT NULL,
+    nome TEXT NOT NULL,
     dataNascimento DATE,
     anoInscricao INTEGER NOT NULL DEFAULT 2018,
-    media INTEGER,
-    mediaDeEntrada INTEGER
+    media REAL,
+    mediaDeEntrada REAL
 );
 
 CREATE TABLE EstudanteERASMUS(
@@ -45,91 +45,92 @@ CREATE TABLE EstudanteNormal(
 
 CREATE TABLE Docente(
     id INTEGER PRIMARY KEY,
-    numero INTEGER,
-    nome TEXT,
+    numero INTEGER UNIQUE NOT NULL,
+    nome TEXT NOT NULL,
     dataDeNascimento DATE,
-    cargo REFERENCES Cargo,
-    dept REFERENCES Departamento
+    cargo REFERENCES Cargo NOT NULL,
+    dept REFERENCES Departamento NOT NULL
 );
 
 CREATE TABLE Cargo(
     id INTEGER PRIMARY KEY,
-    nome TEXT
+    nome TEXT NOT NULL
 );
 
 CREATE TABLE UC(
     id INTEGER PRIMARY KEY,
-    nome TEXT,
-    acronimo TEXT,
-    creditos REAL,
-    semestre INTEGER, /*1 ou 2*/
-    ano INTEGER, /* depende do tipo de curso */
-    curso REFERENCES Curso
+    nome TEXT NOT NULL,
+    acronimo TEXT NOT NULL,
+    creditos REAL NOT NULL CHECK(creditos > 0) ,
+    semestre INTEGER NOT NULL CHECK(semestre == 1 OR semestre == 2), /*1 ou 2*/
+    ano INTEGER, /* TODO depende do tipo de curso */
+    curso REFERENCES Curso NOT NULL
 );
 
 CREATE TABLE OcorrenciaUC(
     id INTEGER PRIMARY KEY,
-    anoLetivo INTEGER,
-    uc REFERENCES UC
+    anoLetivo INTEGER NOT NULL,
+    uc REFERENCES UC NOT NULL
 );
 
 CREATE TABLE Curso(
     id INTEGER PRIMARY KEY,
-    sigla TEXT,
-    nome TEXT,
-    tipo REFERENCES TipoCurso,
-    dept REFERENCES Departamento
+    sigla TEXT NOT NULL,
+    nome TEXT NOT NULL,
+    tipo REFERENCES TipoCurso NOT NULL,
+    dept REFERENCES Departamento NOT NULL
+    /* TODO talvez adicionar duração, para validar as UCs (ano) */
 );
 
 CREATE TABLE TipoCurso(
     id INTEGER PRIMARY KEY,
-    nome TEXT
+    nome TEXT UNIQUE NOT NULL
 );
 
 CREATE TABLE Departamento(
     id INTEGER PRIMARY KEY,
-    nome TEXT
+    nome TEXT UNIQUE NOT NULL
 );
 
 CREATE TABLE Edificio(
     id INTEGER PRIMARY KEY,
-    nome TEXT,
-    sigla TEXT,
-    dept REFERENCES Departamento
+    nome TEXT NOT NULL,
+    sigla TEXT UNIQUE NOT NULL,
+    dept REFERENCES Departamento NOT NULL
 );
 
 CREATE TABLE Sala(
     id INTEGER PRIMARY KEY,
-    numero INTEGER,
-    tipo REFERENCES TipoSala,
-    edificio REFERENCES Edificio
+    numero INTEGER UNIQUE NOT NULL CHECK(numero > 0),
+    tipo REFERENCES TipoSala NOT NULL,
+    edificio REFERENCES Edificio NOT NULL
 );
 
 CREATE TABLE TipoSala(
     id INTEGER PRIMARY KEY,
-    nome TEXT
+    nome TEXT NOT NULL
 );
 
 CREATE TABLE Aula(
     id INTEGER PRIMARY KEY,
-    diaSemana INTEGER, /* 0 -> segunda, ...*/
+    diaSemana INTEGER CHECK(diaSemana >= 0 AND diaSemana <= 5),
     hora TIME,
     duracao TIME,
-    tipo REFERENCES TipoAula,
-    sala REFERENCES Sala,
-    ocorrenciaUC REFERENCES OcorrenciaUC,
-    docente REFERENCES Docente
+    tipo REFERENCES TipoAula NOT NULL,
+    sala REFERENCES Sala NOT NULL,
+    ocorrenciaUC REFERENCES OcorrenciaUC NOT NULL,
+    docente REFERENCES Docente NOT NULL
 );
 
 CREATE TABLE TipoAula(
     id INTEGER PRIMARY KEY,
-    nome TEXT
+    nome TEXT NOT NULL
 );
 
 CREATE TABLE Classificacao(
     estudanteID REFERENCES Estudante,
     oucID REFERENCES OcorrenciaUC,
-    nota REAL /* 0 a 20 */
+    nota REAL CHECK(nota >= 0 AND nota <= 20)
 );
 
 CREATE TABLE Gabinete(
@@ -145,5 +146,5 @@ CREATE TABLE DocenteUCs(
 CREATE TABLE Frequencia(
     estudanteId REFERENCES Estudante,
     oucId REFERENCES OcorrenciaUC,
-    faltas INTEGER
+    faltas INTEGER NOT NULL CHECK(faltas > 0)
 );
