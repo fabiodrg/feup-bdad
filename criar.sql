@@ -65,7 +65,9 @@ CREATE TABLE UC(
     creditos REAL NOT NULL CHECK(creditos > 0) ,
     semestre INTEGER NOT NULL CHECK(semestre == 1 OR semestre == 2), /*1 ou 2*/
     ano INTEGER, /* TODO depende do tipo de curso */
-    curso REFERENCES Curso NOT NULL
+    curso REFERENCES Curso NOT NULL,
+    UNIQUE(acronimo, curso)
+    
 );
 
 CREATE TABLE OcorrenciaUC(
@@ -102,9 +104,10 @@ CREATE TABLE Edificio(
 
 CREATE TABLE Sala(
     id INTEGER PRIMARY KEY,
-    numero INTEGER UNIQUE NOT NULL,
+    numero INTEGER NOT NULL,
     tipo REFERENCES TipoSala NOT NULL,
-    edificio REFERENCES Edificio NOT NULL
+    edificio REFERENCES Edificio NOT NULL,
+    UNIQUE(numero, edificio)
 );
 
 CREATE TABLE TipoSala(
