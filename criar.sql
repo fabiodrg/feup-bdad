@@ -1,3 +1,4 @@
+PRAGMA foreign_keys = ON;
 /* Delete tables if they already exist */
 drop table if exists Estudante;
 drop table if exists EstudanteERASMUS;
@@ -25,9 +26,9 @@ CREATE TABLE Estudante (
     numero INTEGER UNIQUE NOT NULL,
     nome TEXT NOT NULL,
     dataNascimento DATE,
-    anoInscricao INTEGER NOT NULL DEFAULT 2018,
-    media REAL,
-    mediaDeEntrada REAL
+    anoInscricao INTEGER NOT NULL DEFAULT 2017,
+    media REAL DEFAULT 0,
+    mediaDeEntrada REAL CHECK(mediaDeEntrada >= 9.5)
 );
 
 CREATE TABLE EstudanteERASMUS(
@@ -77,9 +78,9 @@ CREATE TABLE Curso(
     id INTEGER PRIMARY KEY,
     sigla TEXT NOT NULL,
     nome TEXT NOT NULL,
+    duracao INTEGER CHECK (duracao > 0),
     tipo REFERENCES TipoCurso NOT NULL,
     dept REFERENCES Departamento NOT NULL
-    /* TODO talvez adicionar duração, para validar as UCs (ano) */
 );
 
 CREATE TABLE TipoCurso(
