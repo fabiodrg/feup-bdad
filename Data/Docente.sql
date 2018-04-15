@@ -1,3 +1,6 @@
+/*
+    Docente
+*/
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (4459, 'Fredric Moffet', '1978-12-23 03:35:02', 3, 7);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (495, 'Raeann Karoly', '1950-04-28 15:20:08', 1, 1);
 insert into Docente (numero, nome, dataDeNascimento, cargo, dept) values (3489, 'Carina Grigorescu', '1956-04-03 07:12:58', 4, 4);

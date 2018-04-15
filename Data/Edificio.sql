@@ -1,3 +1,6 @@
+/*
+    Edificio
+*/
 insert into Edificio (nome, sigla, dept) values ('curae', 'JJSC', 4);
 insert into Edificio (nome, sigla, dept) values ('proin', 'SFME', 3);
 insert into Edificio (nome, sigla, dept) values ('mi', 'UADT', 5);

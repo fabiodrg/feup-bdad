@@ -1,3 +1,6 @@
+/*
+    Sala
+*/
 insert into Sala (numero, tipo, edificio) values ('846', 3, 2);
 insert into Sala (numero, tipo, edificio) values ('729', 5, 3);
 insert into Sala (numero, tipo, edificio) values ('089', 2, 8);
