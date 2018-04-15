@@ -134,7 +134,8 @@ CREATE TABLE TipoAula(
 CREATE TABLE Classificacao(
     estudanteID REFERENCES Estudante,
     oucID REFERENCES OcorrenciaUC,
-    nota REAL CHECK(nota >= 0 AND nota <= 20)
+    nota REAL CHECK(nota >= 0 AND nota <= 20),
+    UNIQUE (estudanteID, oucID)
 );
 
 CREATE TABLE Gabinete(
@@ -150,5 +151,6 @@ CREATE TABLE DocenteUCs(
 CREATE TABLE Frequencia(
     estudanteId REFERENCES Estudante,
     oucId REFERENCES OcorrenciaUC,
-    faltas INTEGER NOT NULL CHECK(faltas > 0)
+    faltas INTEGER NOT NULL CHECK(faltas > 0),
+    UNIQUE (estudanteId, oucId) 
 );
