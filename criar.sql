@@ -47,7 +47,7 @@ CREATE TABLE EstudanteNormal(
 );
 
 CREATE TABLE Docente(
-    id INTEGER PRIMARY KEY,
+    idDocente INTEGER PRIMARY KEY,
     numero INTEGER UNIQUE NOT NULL,
     nome TEXT NOT NULL,
     dataDeNascimento DATE,
