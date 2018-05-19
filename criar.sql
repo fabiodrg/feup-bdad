@@ -61,14 +61,17 @@ CREATE TABLE Cargo(
 );
 
 CREATE TABLE UC(
-    id INTEGER PRIMARY KEY,
+    idUC INTEGER PRIMARY KEY,
     nome TEXT NOT NULL,
     acronimo TEXT NOT NULL,
-    creditos REAL NOT NULL CHECK(creditos > 0) ,
-    semestre INTEGER NOT NULL CHECK(semestre == 1 OR semestre == 2), /*1 ou 2*/
-    ano INTEGER, /* TODO depende do tipo de curso */
+    creditos REAL NOT NULL , -- > 0
+    semestre INTEGER NOT NULL, -- 1 || 2
+    ano INTEGER,
     curso REFERENCES Curso NOT NULL,
-    UNIQUE(acronimo, curso)
+    -- constraints
+    UNIQUE(acronimo, curso),
+    CONSTRAINT InvalidECTS CHECK(creditos > 0),
+    CONSTRAINT InvalidSemester CHECK(semestre == 1 OR semestre == 2) 
     
 );
 
