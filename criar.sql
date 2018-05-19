@@ -34,16 +34,16 @@ CREATE TABLE Estudante (
 );
 
 CREATE TABLE EstudanteERASMUS(
-    idEstudante INTEGER PRIMARY KEY REFERENCES Estudante,
+    idEstudante INTEGER PRIMARY KEY REFERENCES Estudante NOT NULL,
     paisOrigem TEXT
 );
 
 CREATE TABLE EstudanteEE(
-    idEstudante INTEGER PRIMARY KEY REFERENCES Estudante
+    idEstudante INTEGER PRIMARY KEY REFERENCES Estudante NOT NULL
 );
 
 CREATE TABLE EstudanteNormal(
-    idEstudante INTEGER PRIMARY KEY REFERENCES Estudante
+    idEstudante INTEGER PRIMARY KEY REFERENCES Estudante NOT NULL
 );
 
 CREATE TABLE Docente(
