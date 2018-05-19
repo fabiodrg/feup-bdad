@@ -22,26 +22,28 @@ drop table if exists DocenteUCs;
 drop table if exists Frequencia;
 
 CREATE TABLE Estudante (
-    id INTEGER PRIMARY KEY,
+    idEstudante INTEGER PRIMARY KEY,
     numero INTEGER UNIQUE NOT NULL,
     nome TEXT NOT NULL,
-    dataNascimento DATE,
+    dataNascimento DATE NOT NULL,
     anoInscricao INTEGER NOT NULL DEFAULT 2017,
     media REAL DEFAULT 0,
-    mediaDeEntrada REAL CHECK(mediaDeEntrada >= 9.5)
+    mediaDeEntrada REAL,
+    CONSTRAINT InvalidGrade CHECK(mediaDeEntrada >= 9.5),
+    CONSTRAINT NotLegalAge CHECK (anoInscricao - strftime('%Y', dataNascimento) >= 18)
 );
 
 CREATE TABLE EstudanteERASMUS(
-    id INTEGER PRIMARY KEY REFERENCES Estudante,
+    idEstudante INTEGER PRIMARY KEY REFERENCES Estudante,
     paisOrigem TEXT
 );
 
 CREATE TABLE EstudanteEE(
-    id INTEGER PRIMARY KEY REFERENCES Estudante
+    idEstudante INTEGER PRIMARY KEY REFERENCES Estudante
 );
 
 CREATE TABLE EstudanteNormal(
-    id INTEGER PRIMARY KEY REFERENCES Estudante
+    idEstudante INTEGER PRIMARY KEY REFERENCES Estudante
 );
 
 CREATE TABLE Docente(
