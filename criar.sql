@@ -76,13 +76,13 @@ CREATE TABLE UC(
 );
 
 CREATE TABLE OcorrenciaUC(
-    id INTEGER PRIMARY KEY,
+    idOcorrenciaUC INTEGER PRIMARY KEY,
     anoLetivo INTEGER NOT NULL,
     uc REFERENCES UC NOT NULL
 );
 
 CREATE TABLE Curso(
-    id INTEGER PRIMARY KEY,
+    idCurso INTEGER PRIMARY KEY,
     sigla TEXT NOT NULL,
     nome TEXT NOT NULL,
     duracao INTEGER CHECK (duracao > 0),
@@ -91,17 +91,17 @@ CREATE TABLE Curso(
 );
 
 CREATE TABLE TipoCurso(
-    id INTEGER PRIMARY KEY,
+    idTipoCurso INTEGER PRIMARY KEY,
     nome TEXT UNIQUE NOT NULL
 );
 
 CREATE TABLE Departamento(
-    id INTEGER PRIMARY KEY,
+    idDepartamento INTEGER PRIMARY KEY,
     nome TEXT UNIQUE NOT NULL
 );
 
 CREATE TABLE Edificio(
-    id INTEGER PRIMARY KEY,
+    idEdificio INTEGER PRIMARY KEY,
     nome TEXT NOT NULL,
     sigla TEXT UNIQUE NOT NULL,
     dept REFERENCES Departamento NOT NULL
