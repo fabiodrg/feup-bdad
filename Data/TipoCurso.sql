@@ -2,7 +2,7 @@
     TipoCurso
 */
 
-insert into TipoCurso (nome) values ("Mestrado");
-insert into TipoCurso (nome) values ("Mestrado Integrado");
-insert into TipoCurso (nome) values ("Licenciatura");
-insert into TipoCurso (nome) values ("Doutoramento");
+insert into TipoCurso (nomeTipoCurso) values ("Mestrado");
+insert into TipoCurso (nomeTipoCurso) values ("Mestrado Integrado");
+insert into TipoCurso (nomeTipoCurso) values ("Licenciatura");
+insert into TipoCurso (nomeTipoCurso) values ("Doutoramento");

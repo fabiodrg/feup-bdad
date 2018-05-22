@@ -2,9 +2,9 @@
     TipoSala
 */
 
-insert into TipoSala (nome) values ("Gabinete");
-insert into TipoSala (nome) values ("Sala de Computadores");
-insert into TipoSala (nome) values ("Laboratorio");
-insert into TipoSala (nome) values ("Anfiteatro");
-insert into TipoSala (nome) values ("Auditorio");
-insert into TipoSala (nome) values ("Normal");
+insert into TipoSala (nomeTipoSala) values ("Gabinete");
+insert into TipoSala (nomeTipoSala) values ("Sala de Computadores");
+insert into TipoSala (nomeTipoSala) values ("Laboratorio");
+insert into TipoSala (nomeTipoSala) values ("Anfiteatro");
+insert into TipoSala (nomeTipoSala) values ("Auditorio");
+insert into TipoSala (nomeTipoSala) values ("Normal");

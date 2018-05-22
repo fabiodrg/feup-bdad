@@ -1,7 +1,7 @@
 /*
     Cargo
 */
-insert into Cargo (nome) values ("Diretor de Curso");
-insert into Cargo (nome) values ("Professor");
-insert into Cargo (nome) values ("cargo1");
-insert into Cargo (nome) values ("cargo2");
+insert into Cargo (nomeCargo) values ("Diretor de Curso");
+insert into Cargo (nomeCargo) values ("Professor");
+insert into Cargo (nomeCargo) values ("cargo1");
+insert into Cargo (nomeCargo) values ("cargo2");

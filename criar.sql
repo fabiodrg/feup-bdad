@@ -51,111 +51,111 @@ CREATE TABLE Docente(
     numero INTEGER UNIQUE NOT NULL,
     nome TEXT NOT NULL,
     dataDeNascimento DATE,
-    cargo REFERENCES Cargo NOT NULL,
-    dept REFERENCES Departamento NOT NULL
+    idCargo REFERENCES Cargo NOT NULL,
+    idDepartamento REFERENCES Departamento NOT NULL
 );
 
 CREATE TABLE Cargo(
     idCargo INTEGER PRIMARY KEY,
-    nome TEXT UNIQUE NOT NULL
+    nomeCargo TEXT UNIQUE NOT NULL
 );
 
 CREATE TABLE UC(
     idUC INTEGER PRIMARY KEY,
-    nome TEXT NOT NULL,
+    nomeUC TEXT NOT NULL,
     acronimo TEXT NOT NULL,
     creditos REAL NOT NULL , -- > 0
     semestre INTEGER NOT NULL, -- 1 || 2
     ano INTEGER,
-    curso REFERENCES Curso NOT NULL,
+    idCurso REFERENCES Curso NOT NULL,
     -- constraints
-    UNIQUE(acronimo, curso),
+    UNIQUE(acronimo, idCurso),
     CONSTRAINT InvalidECTS CHECK(creditos > 0),
-    CONSTRAINT InvalidSemester CHECK(semestre == 1 OR semestre == 2) 
+    CONSTRAINT InvalidSemester CHECK(semestre == 1 OR semestre == 2) --todo == or =
     
 );
 
 CREATE TABLE OcorrenciaUC(
     idOcorrenciaUC INTEGER PRIMARY KEY,
     anoLetivo INTEGER NOT NULL,
-    uc REFERENCES UC NOT NULL
+    idUC REFERENCES UC NOT NULL
 );
 
 CREATE TABLE Curso(
     idCurso INTEGER PRIMARY KEY,
     sigla TEXT NOT NULL,
-    nome TEXT NOT NULL,
+    nomeCurso TEXT NOT NULL,
     duracao INTEGER CHECK (duracao > 0),
-    tipo REFERENCES TipoCurso NOT NULL,
-    dept REFERENCES Departamento NOT NULL
+    idTipoCurso REFERENCES TipoCurso NOT NULL,
+    idDepartamento REFERENCES Departamento NOT NULL
 );
 
 CREATE TABLE TipoCurso(
     idTipoCurso INTEGER PRIMARY KEY,
-    nome TEXT UNIQUE NOT NULL
+    nomeTipoCurso TEXT UNIQUE NOT NULL
 );
 
 CREATE TABLE Departamento(
     idDepartamento INTEGER PRIMARY KEY,
-    nome TEXT UNIQUE NOT NULL
+    nomeDepartamento TEXT UNIQUE NOT NULL
 );
 
 CREATE TABLE Edificio(
     idEdificio INTEGER PRIMARY KEY,
-    nome TEXT NOT NULL,
+    nomeEdificio TEXT NOT NULL,
     sigla TEXT UNIQUE NOT NULL,
-    dept REFERENCES Departamento NOT NULL
+    idDepartamento REFERENCES Departamento NOT NULL
 );
 
 CREATE TABLE Sala(
-    id INTEGER PRIMARY KEY,
+    idSala INTEGER PRIMARY KEY,
     numero INTEGER NOT NULL,
-    tipo REFERENCES TipoSala NOT NULL,
-    edificio REFERENCES Edificio NOT NULL,
-    UNIQUE(numero, edificio)
+    idTipoSala REFERENCES TipoSala NOT NULL,
+    idEdificio REFERENCES Edificio NOT NULL,
+    UNIQUE(numero, idEdificio)
 );
 
 CREATE TABLE TipoSala(
-    id INTEGER PRIMARY KEY,
-    nome TEXT NOT NULL
+    idTipoSala INTEGER PRIMARY KEY,
+    nomeTipoSala TEXT NOT NULL
 );
 
 CREATE TABLE Aula(
-    id INTEGER PRIMARY KEY,
+    idAula INTEGER PRIMARY KEY,
     diaSemana INTEGER CHECK(diaSemana >= 0 AND diaSemana <= 5),
     hora TIME,
     duracao TIME,
-    tipo REFERENCES TipoAula NOT NULL,
-    sala REFERENCES Sala NOT NULL,
-    ocorrenciaUC REFERENCES OcorrenciaUC NOT NULL,
-    docente REFERENCES Docente NOT NULL
+    idTipoAula REFERENCES TipoAula NOT NULL,
+    idSala REFERENCES Sala NOT NULL,
+    idOcorrenciaUC REFERENCES OcorrenciaUC NOT NULL,
+    idDocente REFERENCES Docente NOT NULL
 );
 
 CREATE TABLE TipoAula(
-    id INTEGER PRIMARY KEY,
+    idTipoAula INTEGER PRIMARY KEY,
     nome TEXT NOT NULL
 );
 
 CREATE TABLE Classificacao(
-    estudanteID REFERENCES Estudante,
-    oucID REFERENCES OcorrenciaUC,
+    idEstudante REFERENCES Estudante,
+    idOcorrenciaUC REFERENCES OcorrenciaUC,
     nota REAL CHECK(nota >= 0 AND nota <= 20),
-    UNIQUE (estudanteID, oucID)
+    UNIQUE (idEstudante, idOcorrenciaUC)
 );
 
 CREATE TABLE Gabinete(
-    docenteID REFERENCES Docente,
-    salaID REFERENCES Sala
+    idDocente REFERENCES Docente,
+    idSala REFERENCES Sala
 );
 
 CREATE TABLE DocenteUCs(
-    ucID REFERENCES UC,
-    docID REFERENCES Docente
+    idUC REFERENCES UC,
+    idDocente REFERENCES Docente
 );
 
 CREATE TABLE Frequencia(
-    estudanteId REFERENCES Estudante,
-    oucId REFERENCES OcorrenciaUC,
+    idEstudante REFERENCES Estudante,
+    idOcorrenciaUC REFERENCES OcorrenciaUC,
     faltas INTEGER NOT NULL CHECK(faltas > 0),
-    UNIQUE (estudanteId, oucId) 
+    UNIQUE (idEstudante, idOcorrenciaUC)
 );
