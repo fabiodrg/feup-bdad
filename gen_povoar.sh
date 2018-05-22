@@ -1,3 +1,4 @@
+echo -n "Concatenating... "
 echo "PRAGMA foreign_keys = ON;" > povoar.sql
 cat Data/Estudante.sql >> povoar.sql
 cat Data/EstudanteNormal.sql >> povoar.sql
@@ -19,3 +20,4 @@ cat Data/Classificacao.sql >> povoar.sql
 cat Data/DocenteUCs.sql >> povoar.sql
 cat Data/Gabinete.sql >> povoar.sql
 cat Data/Frequencia.sql >> povoar.sql
+echo "Done.";
