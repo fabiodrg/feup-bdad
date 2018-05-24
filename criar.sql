@@ -1,30 +1,30 @@
 PRAGMA foreign_keys = ON;
 /* Delete tables if they already exist */
-drop table if exists Estudante;
+drop table if exists Frequencia;
+drop table if exists Gabinete;
+drop table if exists DocenteUCs;
+drop table if exists Classificacao;
+drop table if exists Aula;
+drop table if exists OcorrenciaUC;
+drop table if exists UC;
+drop table if exists Curso;
+drop table if exists Sala;
+drop table if exists Docente;
+drop table if exists TipoAula;
+drop table if exists TipoSala;
+drop table if exists Edificio;
+drop table if exists Departamento;
+drop table if exists TipoCurso;
+drop table if exists Cargo;
 drop table if exists EstudanteERASMUS;
 drop table if exists EstudanteEE;
 drop table if exists EstudanteNormal;
-drop table if exists Docente;
-drop table if exists Cargo;
-drop table if exists UC;
-drop table if exists OcorrenciaUC;
-drop table if exists Curso;
-drop table if exists TipoCurso;
-drop table if exists Departamento;
-drop table if exists Edificio;
-drop table if exists Sala;
-drop table if exists TipoSala;
-drop table if exists Aula;
-drop table if exists TipoAula;
-drop table if exists Classificacao;
-drop table if exists Gabinete;
-drop table if exists DocenteUCs;
-drop table if exists Frequencia;
+drop table if exists Estudante;
 
 CREATE TABLE Estudante (
     idEstudante INTEGER PRIMARY KEY,
-    numero INTEGER UNIQUE NOT NULL,
-    nome TEXT NOT NULL,
+    numeroEstudante INTEGER UNIQUE NOT NULL,
+    nomeEstudante TEXT NOT NULL,
     dataNascimento DATE NOT NULL,
     anoInscricao INTEGER NOT NULL DEFAULT 2017,
     media REAL DEFAULT 0,
@@ -48,8 +48,8 @@ CREATE TABLE EstudanteNormal(
 
 CREATE TABLE Docente(
     idDocente INTEGER PRIMARY KEY,
-    numero INTEGER UNIQUE NOT NULL,
-    nome TEXT NOT NULL,
+    numeroDocente INTEGER UNIQUE NOT NULL,
+    nomeDocente TEXT NOT NULL,
     dataDeNascimento DATE,
     idCargo REFERENCES Cargo NOT NULL,
     idDepartamento REFERENCES Departamento NOT NULL
@@ -109,10 +109,10 @@ CREATE TABLE Edificio(
 
 CREATE TABLE Sala(
     idSala INTEGER PRIMARY KEY,
-    numero INTEGER NOT NULL,
+    numeroSala INTEGER NOT NULL,
     idTipoSala REFERENCES TipoSala NOT NULL,
     idEdificio REFERENCES Edificio NOT NULL,
-    UNIQUE(numero, idEdificio)
+    UNIQUE(numeroSala, idEdificio)
 );
 
 CREATE TABLE TipoSala(
@@ -133,7 +133,7 @@ CREATE TABLE Aula(
 
 CREATE TABLE TipoAula(
     idTipoAula INTEGER PRIMARY KEY,
-    nome TEXT NOT NULL
+    nomeTipoAula TEXT NOT NULL
 );
 
 CREATE TABLE Classificacao(
