@@ -5,10 +5,11 @@ CREATE TRIGGER updateMediaU
 BEGIN
     UPDATE Estudante
        SET media = (
-               SELECT avg(nota) 
-                 FROM classificacao
-                WHERE idestudante = NEW.idEstudante
-           )
+            SELECT sum(nota * creditos)/sum(creditos) FROM classificacao
+                NATURAL JOIN OcorrenciaUC
+                NATURAL JOIN UC
+                WHERE idestudante = NEW.idEstudante AND nota>9.5
+        )
      WHERE idEstudante = NEW.idEstudante;
 END;
 
@@ -20,10 +21,11 @@ CREATE TRIGGER updateMediaI
 BEGIN
     UPDATE Estudante
        SET media = (
-               SELECT avg(nota) 
-                 FROM classificacao
-                WHERE idestudante = NEW.idEstudante
-           )
+            SELECT sum(nota * creditos)/sum(creditos) FROM classificacao
+                NATURAL JOIN OcorrenciaUC
+                NATURAL JOIN UC
+                WHERE idestudante = NEW.idEstudante AND nota>9.5
+        )
      WHERE idEstudante = NEW.idEstudante;
 END;
 
@@ -35,9 +37,10 @@ CREATE TRIGGER updateMediaD
 BEGIN
     UPDATE Estudante
        SET media = (
-               SELECT avg(nota) 
-                 FROM classificacao
-                WHERE idestudante = OLD.idEstudante
-           )
+            SELECT sum(nota * creditos)/sum(creditos) FROM classificacao
+                NATURAL JOIN OcorrenciaUC
+                NATURAL JOIN UC
+                WHERE idestudante = OLD.idEstudante AND nota>9.5
+        )
      WHERE idEstudante = OLD.idEstudante;
 END;
