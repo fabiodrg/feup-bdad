@@ -156,6 +156,6 @@ CREATE TABLE DocenteUCs(
 CREATE TABLE Frequencia(
     idEstudante REFERENCES Estudante,
     idOcorrenciaUC REFERENCES OcorrenciaUC,
-    faltas INTEGER NOT NULL CHECK(faltas > 0),
+    faltas INTEGER NOT NULL CHECK(faltas >= 0),
     UNIQUE (idEstudante, idOcorrenciaUC)
 );
