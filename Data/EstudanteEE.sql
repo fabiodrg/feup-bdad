@@ -1,23 +1,16 @@
 /*
     EstudanteEE
 */
-insert into EstudanteEE (idEstudante) values (101);
-insert into EstudanteEE (idEstudante) values (102);
-insert into EstudanteEE (idEstudante) values (103);
-insert into EstudanteEE (idEstudante) values (104);
+insert into EstudanteEE (idEstudante) values (80);
+insert into EstudanteEE (idEstudante) values (12);
+insert into EstudanteEE (idEstudante) values (13);
+insert into EstudanteEE (idEstudante) values (14);
 insert into EstudanteEE (idEstudante) values (105);
-insert into EstudanteEE (idEstudante) values (106);
-insert into EstudanteEE (idEstudante) values (107);
-insert into EstudanteEE (idEstudante) values (108);
-insert into EstudanteEE (idEstudante) values (109);
-insert into EstudanteEE (idEstudante) values (110);
-insert into EstudanteEE (idEstudante) values (111);
-insert into EstudanteEE (idEstudante) values (112);
-insert into EstudanteEE (idEstudante) values (113);
-insert into EstudanteEE (idEstudante) values (114);
-insert into EstudanteEE (idEstudante) values (115);
-insert into EstudanteEE (idEstudante) values (116);
-insert into EstudanteEE (idEstudante) values (117);
+insert into EstudanteEE (idEstudante) values (16);
+insert into EstudanteEE (idEstudante) values (17);
+insert into EstudanteEE (idEstudante) values (18);
+insert into EstudanteEE (idEstudante) values (19);
+insert into EstudanteEE (idEstudante) values (10);
 insert into EstudanteEE (idEstudante) values (118);
 insert into EstudanteEE (idEstudante) values (119);
 insert into EstudanteEE (idEstudante) values (120);
