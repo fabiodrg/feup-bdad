@@ -1,1 +1,4 @@
-DROP TRIGGER EstudanteNormal;
+DROP TRIGGER EstudanteNormalI;
+
+DROP TRIGGER EstudanteNormalU;
+
