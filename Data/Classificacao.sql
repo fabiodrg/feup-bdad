@@ -595,7 +595,6 @@ insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (28, 702, 1
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (413, 447, 11.97);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (94, 504, 11.66);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (380, 967, 6.85);
-insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (432, 452, 13.7);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (51, 426, 13.66);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (251, 338, 13.58);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (180, 614, 3.39);
@@ -777,7 +776,6 @@ insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (341, 183, 
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (316, 84, 17.12);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (130, 23, 5.55);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (14, 38, 19.96);
-insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (500, 452, 9.1);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (433, 483, 1.32);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (401, 264, 2.73);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (426, 121, 9.25);
@@ -1001,3 +999,18 @@ insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (41, 497, 1
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (13, 941, 9.46);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (190, 612, 7.91);
 insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (7, 775, 14.48);
+-- Data for testing query no. 5
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (432, 452, 13.7);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (500, 452, 9.1);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (1, 452, 20);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (4, 452, 5);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (9, 452, 10);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (10, 452, 9.5);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (14, 452, 15);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (15, 452, 13);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (17, 452, 11);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (21, 452, 17);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (22, 452, 19);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (23, 452, 3);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (40, 452, 2);
+insert into Classificacao (idEstudante, idOcorrenciaUC, nota) values (102, 452, 16);
