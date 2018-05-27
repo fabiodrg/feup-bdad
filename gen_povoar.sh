@@ -1,23 +1,24 @@
+filename=povoar.sql
 echo -n "Concatenating... "
-echo "PRAGMA foreign_keys = ON;" > povoar.sql
-cat Data/Estudante.sql >> povoar.sql
-cat Data/EstudanteNormal.sql >> povoar.sql
-cat Data/EstudanteERASMUS.sql >> povoar.sql
-cat Data/EstudanteEE.sql >> povoar.sql
-cat Data/Cargo.sql >> povoar.sql
-cat Data/TipoCurso.sql >> povoar.sql
-cat Data/Departamento.sql >> povoar.sql
-cat Data/Edificio.sql >> povoar.sql
-cat Data/TipoSala.sql >> povoar.sql
-cat Data/TipoAula.sql >> povoar.sql
-cat Data/Docente.sql >> povoar.sql
-cat Data/Sala.sql >> povoar.sql
-cat Data/Curso.sql >> povoar.sql
-cat Data/UC.sql >> povoar.sql
-cat Data/OcorrenciaUC.sql >> povoar.sql
-cat Data/Aula.sql >> povoar.sql
-cat Data/Classificacao.sql >> povoar.sql
-cat Data/DocenteUCs.sql >> povoar.sql
-cat Data/Gabinete.sql >> povoar.sql
-cat Data/Frequencia.sql >> povoar.sql
-echo "Done.";
+echo "PRAGMA foreign_keys = ON;" > $filename
+cat Data/Estudante.sql >> $filename
+cat Data/EstudanteNormal.sql >> $filename
+cat Data/EstudanteERASMUS.sql >> $filename
+cat Data/EstudanteEE.sql >> $filename
+cat Data/Cargo.sql >> $filename
+cat Data/TipoCurso.sql >> $filename
+cat Data/Departamento.sql >> $filename
+cat Data/Edificio.sql >> $filename
+cat Data/TipoSala.sql >> $filename
+cat Data/TipoAula.sql >> $filename
+cat Data/Docente.sql >> $filename
+cat Data/Sala.sql >> $filename
+cat Data/Curso.sql >> $filename
+cat Data/UC.sql >> $filename
+cat Data/OcorrenciaUC.sql >> $filename
+cat Data/Aula.sql >> $filename
+cat Data/Classificacao.sql >> $filename
+cat Data/DocenteUCs.sql >> $filename
+cat Data/Gabinete.sql >> $filename
+cat Data/Frequencia.sql >> $filename
+echo "Done."
