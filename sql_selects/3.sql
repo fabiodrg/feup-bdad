@@ -2,7 +2,7 @@
 .headers	on
 .nullvalue	NULL
 
-SELECT idUC, ano, semestre, nomeUC, anoLetivo, nota
+SELECT ano, semestre, idUC, nomeUC, anoLetivo, nota
 FROM (
     SELECT max(nota), idUC, ano, semestre, nomeUC, anoLetivo, nota
     FROM Estudante NATURAL JOIN Classificacao NATURAL JOIN OcorrenciaUC NATURAL JOIN UC 
