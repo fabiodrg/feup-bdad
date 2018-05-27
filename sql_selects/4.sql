@@ -1,3 +1,7 @@
+.mode	      columns
+.headers	  on
+.nullvalue	NULL
+
 SELECT 
 CASE
  WHEN diaSemana = 0 THEN 'Domingo'
@@ -13,4 +17,4 @@ NATURAL JOIN Docente
 NATURAL JOIN OcorrenciaUC
 NATURAL JOIN UC
 NaTURAL JOIN Sala
-WHERE anoLetivo = 2017 AND idDocente = 21
+WHERE anoLetivo = 2017 AND idDocente = 21;

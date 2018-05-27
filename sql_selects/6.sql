@@ -1,3 +1,7 @@
+.mode		columns
+.headers	on
+.nullvalue  NULL
+
 SELECT idEdificio,
        ocup,
        (count(1) - ocup) AS livres
@@ -12,4 +16,4 @@ NATURAL JOIN
       NATURAL JOIN SALA)
    GROUP BY idEdificio )
 GROUP BY idEdificio
-ORDER BY count(1) DESC
+ORDER BY count(1) DESC;
