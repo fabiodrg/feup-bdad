@@ -2,10 +2,7 @@
 .headers	on
 .nullvalue	NULL
 
-SELECT *
-FROM OcorrenciaUC
-    NATURAL JOIN Estudante
-    NATURAL JOIN Aula
-WHERE idOcorrenciaUC == 44
-GROUP BY idEstudante
-ORDER BY diaSemana, hora ASC;
+SELECT idUC, ano, semestre, nomeUC, anoLetivo, nota
+FROM Estudante NATURAL JOIN Classificacao NATURAL JOIN OcorrenciaUC NATURAL JOIN UC
+WHERE idEstudante = 218
+ORDER BY ano, semestre, nomeUC;
