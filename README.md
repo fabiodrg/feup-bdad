@@ -1,4 +1,4 @@
-#BDAD1718
+# BDAD1718 @FEUP
 
 Information Systems (IS) is a key topic in informatics engineering. Databases are the data repository that is required in any IS. The database course is a key course in the area of IS. The main objective of this course unit is to prepare students to design and develop database systems that meet the users' needs according to the organizational management goals.
 
